@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,12 +36,15 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.ProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -110,26 +114,6 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(570, 51);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 31);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(658, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 31);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // ProductCode
             // 
             this.ProductCode.HeaderText = "ProductCode";
@@ -146,11 +130,46 @@
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(539, 51);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 31);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Delete";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(624, 51);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(80, 31);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Add";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(706, 51);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(80, 31);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Reset";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -164,6 +183,7 @@
             this.Text = "Products";
             this.Load += new System.EventHandler(this.Products_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +203,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
